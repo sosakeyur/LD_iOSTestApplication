@@ -6,39 +6,16 @@
 //  Copyright © 2019 KEYUR SOSA. All rights reserved.
 //
 
-public struct NewsModel: Decodable {
-    let kind: String
-    let childrenData: ChildrenData
-}
-
-extension NewsModel {
-    private enum CodingKeys: String, CodingKey {
-        case kind
-        case childrenData = "data"
+enum MainModels {
+    struct Response {
+        let newsModel: NewsModel?
     }
-}
 
-struct ChildrenData: Decodable {
-    let children: [Child]
-
-    enum CodingKeys: String, CodingKey {
-        case children
+    struct ViewModel {
+        let children: [ChildViewModel]
     }
-}
 
-struct Child: Decodable {
-    let childData: ChildData
-
-    enum CodingKeys: String, CodingKey {
-        case childData = "data"
-    }
-}
-
-//
-struct ChildData: Decodable {
-    let title: String
-
-    enum CodingKeys: String, CodingKey {
-        case title
+    struct ChildViewModel {
+        let title: String
     }
 }

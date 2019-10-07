@@ -11,5 +11,16 @@ protocol MainInterface {
 }
 
 protocol MainPresentable {
-    func presentFetched(for response:)
+    func presentFetched(for response: MainModels.Response)
+    func presentFetched(error: Error?)
 }
+
+protocol MainDisplayable: class { // Controller
+    func displayFetched(with viewModel: MainModels.ViewModel)
+    func displayFetched(with error: String)
+}
+
+protocol HomeRoutable { // Router
+    func navigateToDetail(with segueId: String, newsData: MainModels.ChildViewModel?)
+}
+
