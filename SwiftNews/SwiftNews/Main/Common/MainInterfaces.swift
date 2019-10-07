@@ -6,4 +6,10 @@
 //  Copyright © 2019 KEYUR SOSA. All rights reserved.
 //
 
-import Foundation
+protocol MainInterface {
+    func fetchNews()
+}
+
+protocol MainPresentable {
+    func presentFetched(for response:)
+}
