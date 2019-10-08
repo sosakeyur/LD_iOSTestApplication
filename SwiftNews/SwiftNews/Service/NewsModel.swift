@@ -37,8 +37,12 @@ struct Child: Decodable {
 //
 struct ChildData: Decodable {
     let title: String
+    let selftext: String
+    let thumbnail: String
 
     enum CodingKeys: String, CodingKey {
         case title
+        case selftext
+        case thumbnail
     }
 }

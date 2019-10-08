@@ -17,5 +17,7 @@ enum MainModels {
 
     struct ChildViewModel {
         let title: String
+        let selftext: String
+        let thumbnail: String?
     }
 }

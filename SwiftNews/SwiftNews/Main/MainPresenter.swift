@@ -24,7 +24,10 @@ extension MainPresenter {
 
         let viewModel = MainModels.ViewModel(
             children: newsModel.childrenData.children.map {
-                MainModels.ChildViewModel(title: $0.childData.title)
+                MainModels.ChildViewModel(
+                    title: $0.childData.title,
+                    selftext: $0.childData.selftext,
+                    thumbnail: $0.childData.thumbnail)
             }
         )
         viewController?.displayFetched(with: viewModel)

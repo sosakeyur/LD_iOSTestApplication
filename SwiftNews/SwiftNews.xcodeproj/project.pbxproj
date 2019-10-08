@@ -14,6 +14,8 @@
 		8483546D234B79E700721DC3 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483546C234B79E700721DC3 /* MainInteractor.swift */; };
 		8483546F234B79FA00721DC3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483546E234B79FA00721DC3 /* MainPresenter.swift */; };
 		84835471234B802C00721DC3 /* MainCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835470234B802C00721DC3 /* MainCellTableViewCell.swift */; };
+		84835473234BB04F00721DC3 /* baby1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84835472234BB04F00721DC3 /* baby1.jpg */; };
+		84835478234C3DEB00721DC3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835477234C3DEB00721DC3 /* Extensions.swift */; };
 		C9E2E59D234AFF5C00771ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2E59C234AFF5C00771ACB /* AppDelegate.swift */; };
 		C9E2E59F234AFF5C00771ACB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2E59E234AFF5C00771ACB /* MainViewController.swift */; };
 		C9E2E5A2234AFF5C00771ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E2E5A0234AFF5C00771ACB /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		8483546C234B79E700721DC3 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		8483546E234B79FA00721DC3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		84835470234B802C00721DC3 /* MainCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellTableViewCell.swift; sourceTree = "<group>"; };
+		84835472234BB04F00721DC3 /* baby1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baby1.jpg; sourceTree = "<group>"; };
+		84835477234C3DEB00721DC3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C9E2E599234AFF5C00771ACB /* SwiftNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E2E59C234AFF5C00771ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E2E59E234AFF5C00771ACB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		84835476234C3D3900721DC3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84835477234C3DEB00721DC3 /* Extensions.swift */,
+			);
+			name = Extension;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C9E2E590234AFF5B00771ACB = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +112,14 @@
 		C9E2E59B234AFF5C00771ACB /* SwiftNews */ = {
 			isa = PBXGroup;
 			children = (
+				C9E2E5B5234AFFEE00771ACB /* Main */,
 				84835463234B75CD00721DC3 /* Detail */,
 				84835462234B75CB00721DC3 /* Service */,
 				84835461234B75C800721DC3 /* Networking */,
-				C9E2E5B5234AFFEE00771ACB /* Main */,
+				84835476234C3D3900721DC3 /* Extension */,
 				C9E2E5B1234AFFCA00771ACB /* app-UI */,
 				C9E2E59C234AFF5C00771ACB /* AppDelegate.swift */,
+				84835472234BB04F00721DC3 /* baby1.jpg */,
 				C9E2E5A6234AFF7F00771ACB /* Assets.xcassets */,
 				C9E2E5AB234AFF7F00771ACB /* Info.plist */,
 				C9E2E5A3234AFF5C00771ACB /* SwiftNews.xcdatamodeld */,
@@ -211,6 +226,7 @@
 				C9E2E5AA234AFF7F00771ACB /* LaunchScreen.storyboard in Resources */,
 				C9E2E5A7234AFF7F00771ACB /* Assets.xcassets in Resources */,
 				C9E2E5A2234AFF5C00771ACB /* Main.storyboard in Resources */,
+				84835473234BB04F00721DC3 /* baby1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +249,7 @@
 				8483546F234B79FA00721DC3 /* MainPresenter.swift in Sources */,
 				C9E2E5BC234B007A00771ACB /* MainModel.swift in Sources */,
 				C9E2E59D234AFF5C00771ACB /* AppDelegate.swift in Sources */,
+				84835478234C3DEB00721DC3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
