@@ -14,10 +14,15 @@ class MainCellTableViewCell: UITableViewCell {
 }
 
 extension MainCellTableViewCell {
-    func bind(with viewModel: MainModels.ChildViewModel?) {
+    func bind(with viewModel: MainModels.ChildViewModel?, completion: @escaping (_ result: UIImage?) -> Void) {
         newsTitle.text = viewModel?.title
-        articalThumbImage.loadImage(from: "https://b.thumbs.redditmedia.com/OqJY94cOahTur0iqw1rrpnClcZLBaltcXfb_xP46ytw.jpg")
+        articalThumbImage.loadImage(from: viewModel?.thumbnail, completion: { result in
+            DispatchQueue.main.async {
+                self.articalThumbImage.isHidden = result
+                if result == false {
+                    completion(self.articalThumbImage.image)
+                }
+            }
+        })
     }
 }
-
-

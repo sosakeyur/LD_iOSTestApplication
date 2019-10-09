@@ -5,10 +5,10 @@
 //  Created by KEYUR SOSA on 10/7/19.
 //  Copyright © 2019 KEYUR SOSA. All rights reserved.
 //
-
+import UIKit
 enum MainModels {
     struct Response {
-        let newsModel: NewsModel?
+        var newsModel: NewsModel?
     }
 
     struct ViewModel {
@@ -19,5 +19,6 @@ enum MainModels {
         let title: String
         let selftext: String
         let thumbnail: String?
+        var articalImage: UIImage?
     }
 }

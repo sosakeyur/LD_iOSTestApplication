@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     // MARK: - Controls
 
     @IBOutlet var tableView: UITableView!
+    var rowHeights: [Int: CGFloat] = [:] // declaration of Dictionary
 
     // MARK: - Scene variables
 
@@ -27,6 +28,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configure()
     }
 
@@ -39,7 +41,10 @@ class MainViewController: UIViewController {
 // MARK: - Events
 
 private extension MainViewController {
-    func configure() {}
+    func configure() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 140
+    }
 
     func loadData() {
         interactor.fetchNews()
@@ -55,7 +60,6 @@ private extension MainViewController {}
 extension MainViewController: MainDisplayable {
     func displayFetched(with viewModel: MainModels.ViewModel) {
         newsData = viewModel.children
-
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -76,7 +80,11 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCellTableViewCell
 
-        cell.bind(with: newsData?[indexPath.row])
+        cell.bind(with: newsData?[indexPath.row], completion: { image in
+            tableView.beginUpdates()
+            self.newsData?[indexPath.row].articalImage = image
+            tableView.endUpdates()
+        })
 
         return cell
     }

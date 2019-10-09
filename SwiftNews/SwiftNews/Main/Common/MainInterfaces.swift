@@ -23,4 +23,3 @@ protocol MainDisplayable: class { // Controller
 protocol HomeRoutable { // Router
     func navigateToDetail(with segueId: String, newsData: MainModels.ChildViewModel?)
 }
-

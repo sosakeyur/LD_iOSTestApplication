@@ -27,7 +27,9 @@ extension MainPresenter {
                 MainModels.ChildViewModel(
                     title: $0.childData.title,
                     selftext: $0.childData.selftext,
-                    thumbnail: $0.childData.thumbnail)
+                    thumbnail: $0.childData.thumbnail,
+                    articalImage: nil
+                )
             }
         )
         viewController?.displayFetched(with: viewModel)
